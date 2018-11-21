@@ -28,3 +28,6 @@ regr.fit(train_x, train_y)
 # The coefficients
 print ('Coefficients: ', regr.coef_)
 print ('Intercept: ',regr.intercept_)
+#As mentioned before, __Coefficient__ and __Intercept__ in the simple linear regression, are the parameters of the fit line. 
+#Given that it is a simple linear regression, with only 2 parameters, and knowing that the parameters are the intercept and slope of the line, sklearn can estimate them directly from our data. 
+#Notice that all of the data must be available to traverse and calculate the parameters.
