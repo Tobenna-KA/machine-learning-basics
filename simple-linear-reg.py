@@ -31,3 +31,15 @@ print ('Intercept: ',regr.intercept_)
 #As mentioned before, __Coefficient__ and __Intercept__ in the simple linear regression, are the parameters of the fit line. 
 #Given that it is a simple linear regression, with only 2 parameters, and knowing that the parameters are the intercept and slope of the line, sklearn can estimate them directly from our data. 
 #Notice that all of the data must be available to traverse and calculate the parameters.
+
+
+#Tests
+# regr = linear_model.LinearRegression()
+test_x = np.asanyarray(test[['ENGINESIZE']])
+test_y = np.asanyarray(test[['CO2EMISSIONS']])
+test_y_ = regr.predict(test_x)
+#regr.fit(test_x, test_y)
+
+print("Mean absolute error: %.2f" % np.mean(np.absolute(test_y_ - test_y)))
+print("Residual sum of squares (MSE): %.2f" % np.mean((test_y_ - test_y) ** 2))
+print("R2-score: %.2f" % r2_score(test_y_ , test_y) )
