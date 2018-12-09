@@ -11,3 +11,5 @@ df = pd.read_csv("FuelConsumption.csv")
 
 # take a look at the dataset
 df.head()
+cdf = df[['ENGINESIZE','CYLINDERS','FUELCONSUMPTION_CITY','FUELCONSUMPTION_HWY','FUELCONSUMPTION_COMB','CO2EMISSIONS']]
+cdf.head(9)
